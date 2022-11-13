@@ -1,0 +1,48 @@
+@@include('html/head.html')
+
+<body class="notranslate">
+
+    @@include('html/sidebar.html')
+
+    <div class="body-container">
+        @@include('html/header.html')
+        <div class="main-content">
+            
+            <div class="logs">
+                <div class="logs__nav">
+                    <form class="f-block" action="#">
+                        <div class="logs__navBlock calendar f-block">
+                            <label for="#beginDate">От</label>
+                            <input type="text" name="beginDate" id="beginDate" placeholder="choose Date">
+                        </div>
+                        <div class="logs__navBlock calendar f-block">
+                            <label for="#beginDate">До</label>
+                            <input type="text" name="beginDate" id="beginDate" placeholder="choose Date">
+                        </div>
+                        <button type="submit">Поиск</button>
+                    </form>
+                </div>
+                <div class="logs__content">
+                    <div class="logs__log">
+                        <div class="f-block">
+                            <div class="profile-img">
+                                <img src="@img/profile.png" alt="profile-img">
+                            </div>
+                            <div class="block">
+                                <div class="item-text item-header">Jack Wilder</div>
+                                <div class="item-text item-mini">Administrator</div>
+                            </div>
+                        </div>
+                        <div class="logs__date item-text">12.11.2022 22:31</div>
+                        <div>Change record №1</div>
+                    </div>
+                    <button id="#loadMoreLogs" data-url="" style="display: block; margin: 2em auto;">Load More</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="js/main.min.js"></script>
+</body>
+</html>

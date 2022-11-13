@@ -1,0 +1,158 @@
+@@include('html/head.html')
+
+<body class="notranslate">
+
+    @@include('html/sidebar.html')
+
+    <div class="body-container">
+        @@include('html/header.html')
+        <div class="main-content">
+            <div class="edit-container">
+                <h1 class="edit-full">Nike airmax</h1>
+                <form class="edit-gap edit-block edit-container edit-full" action="#">
+                    <div class="edit-block edit-full">
+                        <button style="margin: 0 .3em 0 0;">Save</button>
+                        <button>Delete</button>
+                    </div>
+                    <div class="edit-block edit-block-root edit-half">
+                        <div class="edit-block edit-full">
+                            <label for="nameGood">Name of good</label>
+                            <input id="nameGood" type="text" name="nameGood" value="Nike airmax">
+                        </div>
+                        <div class="edit-block edit-full">
+                            <label for="price">price</label>
+                            <input id="price" type="text" name="price" data-maxvalue="8">
+                        </div>
+                        <div class="edit-block edit-full">
+                            <label for="discount">Discount</label>
+                            <input id="discount" type="text" name="discount" value="30%">
+                        </div>
+                        <div class="edit-block edit-full">
+                            <label for="keywords">Keywords</label>
+                            <textarea class="tinymce-editor" name="keywords" id="keywords">Keywords</textarea>
+                        </div>
+
+                        <div class="edit-block edit-full">
+                            <label for="#">choose product</label>
+                            <div class="search-block">
+                                <input type="hidden" name="product_id" value="1">
+                                <input placeholder="Find prodcut" class="search-input" type="text">
+                                <div class="hints-wrapper">
+                                    <div class="hints c-scroll"></div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        
+
+
+
+                        <div class="edit-block edit-full">
+
+                            <div class="label" style="display: block">Visible</div>
+
+                            <input class="radio-input" checked name="radio" id="yes" type="radio">
+                            <label class="radio-label" for="yes"><span></span>Да</label>
+
+                            <input class="radio-input" name="radio" id="no"  type="radio">
+                            <label class="radio-label" for="no"><span></span>Нет</label>
+                        </div>
+
+
+
+
+                        <div class="edit-block edit block-full">
+                            <div class="edit-half key-list-area manyToMany-list-area mini-list-area">
+                                <div class="edit-full sbc" style="margin-bottom: 0.5em;">
+                                    <div class="item-text item-header">Select filters</div>
+                                    <svg><use href="@img/icons/icons.svg#spoiler_narrow"></use></svg>
+                                </div>
+                                <div class="mini-list key-list manyToMany-list edit-full">
+                                    <input id="filter1" name="filter1" type="checkbox">
+                                    <label for="filter1" class="item-text foreignKeyValue">filter 1</label>
+                                    <input id="filter2" name="filter2" type="checkbox">
+                                    <label for="filter2" class="item-text foreignKeyValue">filter 2</label>
+                                    <input id="filter3" name="filter3" type="checkbox">
+                                    <label for="filter3" class="item-text foreignKeyValue">filter 3</label>
+                                    <input id="filter4" name="filter4" type="checkbox">
+                                    <label for="filter4" class="item-text foreignKeyValue">filter 4</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="edit-block edit-full">
+                            <input id="foreignKeys" type="hidden" name="foreignKeys">
+                            <div class="edit-half key-list-area foreignKeysLists-area mini-list-area">
+                                <div class="edit-full sbc" style="margin-bottom: 0.5em;">
+                                    <div class="item-text item-header selected-value">Parent id</div>
+                                    <svg><use href="@img/icons/icons.svg#spoiler_narrow"></use></svg>
+                                </div>
+                                <input name="foreignKey" type="hidden" value="selected table">
+                                <div class="mini-list key-list foreignKeysLists edit-full">
+                                    <div data-id="1" class="item-text foreignKeyValue">table 1</div>
+                                    <div data-id="2" class="item-text foreignKeyValue">table 2</div>
+                                    <div data-id="3" class="item-text foreignKeyValue">table 3</div>
+                                    <div data-id="4" class="item-text foreignKeyValue">table 4</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="edit-block edit-block-root edit-half">
+
+
+                        <div class="edit-block edit-full">
+
+                            <label style="cursor: pointer;" class="" for="mainImg">
+                                <button type="button" style="pointer-events: none;">Изменить</button>
+                            </label>
+                            <div class="edit-block edit-full mainImg">
+                                <div class="img-container">
+                                    <input id="mainImg" type="file" name="mainImg" accept="image/*">
+                                    <img src="https://placepic.ru/wp-content/uploads/2018/11/Собака-породы-сибирский-хаски-с-голубыми-глазами.jpg" alt="gf">
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <div class="edit-block edit-full gallery">
+                            <div class="img-container img-gallery">
+                                <input id="galleryImg" type="file" name="galleryImg[]" multiple accept="image/*">
+                                <div class="img-block">
+                                    <label class="plus-icon" for="galleryImg">
+                                        <span></span><span></span>
+                                    </label>
+                                </div>
+                                <div class="img-block">
+                                    <div class="icon-delete"><span></span><span></span></div>
+                                    <img src="https://s01.yapfiles.ru/files/1990229/bigskywestcoast.jpg" draggable="false" alt="photo">
+                                </div>
+                                <div class="img-block">
+                                    <div class="icon-delete"><span></span><span></span></div>
+                                    <img src="https://s01.yapfiles.ru/files/1990229/bigskywestcoast.jpg" draggable="false" alt="photo">
+                                </div>
+                                <div class="img-block">
+                                    <img src="https://s01.yapfiles.ru/files/1990229/bigskywestcoast.jpg" draggable="false" alt="photo">
+                                    <div class="icon-delete"><span></span><span></span></div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="edit-block edit-block-root edit-full">
+                        <label for="content">Content</label>
+                        <textarea name="content" id="content">Content</textarea>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const SITE_URL = '';
+    </script>
+
+    <script src="js/main.min.js"></script>
+</body>
+</html>

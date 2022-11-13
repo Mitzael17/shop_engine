@@ -1,0 +1,15 @@
+@import "functions_scss/mixins.scss";
+
+.nav-container .contacts {
+    display: flex;
+    flex-direction: column;
+
+    li {
+        margin-top: 30px;
+        width: 100%;
+        display: block;
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+}

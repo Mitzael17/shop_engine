@@ -1,0 +1,55 @@
+@@include('html/head.html')
+
+<body class="notranslate">
+
+    @@include('html/sidebar.html')
+
+    <div class="body-container">
+        @@include('html/header.html')
+        <div class="main-content" style="height: calc(100vh - 5em);">
+
+            <div class="chat">
+                <div class="chat__users c-scroll">
+                    <div data-tab="chat1" class="chat__user user MiTab-narrow  active">
+                        <div class="profile-img"><img src="@img/profile.png" alt="logo"></div>
+                        <div class="block">
+                            <div class="user__name item-text item-header">Jack Wilder</div>
+                            <div class="user__role item-text item-mini">Administrator</div>
+                        </div>
+                        <div class="chat__numberUnreadMessages">2</div>
+                    </div>
+                    <div data-tab="chat2" class="chat__user user chat__user--unread MiTab-narrow">
+                        <div class="profile-img"><img src="@img/profile.png" alt="logo"></div>
+                        <div class="block">
+                            <div class="user__name item-text item-header">Jack Wilder</div>
+                            <div class="user__role item-text item-mini">Administrator</div>
+                        </div>
+                        <div class="chat__numberUnreadMessages">2</div>
+                    </div>
+                </div>
+                <div class="chat__area">
+                    <div class="MiTab-item active" data-tabbody="chat1">
+                        <div class="chat__messages c-scroll">
+                            <div class="chat__messageText item-text chat__messageText--left">Hello</div>
+                            <div class="chat__messageText item-text chat__messageText--right">Hello</div>
+                        </div>
+                        <form class="chat__form no_default_form" action="#" method="post" name="yourMessage">
+                            <div class="chat__inputContainer">
+                                <div class="chat__input c-scroll" placeholder="Type something..." tabindex="0" contenteditable="true" name="yourMessage"></div>
+                            </div>
+                            <button type="submit">Send</button>
+                        </form>  
+                    </div>
+                </div>
+            </div>
+
+        </div>
+            
+    </div>
+
+    <script>
+        const CHAT_SOCKET = 'wsss://host/admin/chat';
+    </script>
+    <script src="js/main.min.js"></script>
+</body>
+</html>
