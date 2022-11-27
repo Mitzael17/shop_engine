@@ -58,202 +58,48 @@
                     <div id="bestSeller__trigger"></div>
                     <h1 class="bestSeller__title">Best seller</h1>
                     <ul class="bestSeller__nav">
-                        <li class="bestSeller__item tab-narrow active" data-tab="All">All</li>
-                        <li class="bestSeller__item tab-narrow" data-tab="Bags">Bags</li>
-                        <li class="bestSeller__item tab-narrow" data-tab="Sneakers">Sneakers</li>
-                        <li class="bestSeller__item tab-narrow" data-tab="Belt">Belt</li>
-                        <li class="bestSeller__item tab-narrow" data-tab="Sunglasses">Sunglasses</li>
+                        <?php foreach ($data['bestSellerTabs']['menu'] as $menu): ?>
+                            <li class="bestSeller__item tab-narrow <?= $menu['name'] === 'all' ? 'active' : ''?>" data-tab="bestSellerTab_<?=$menu['name']?>"><?=$menu['name']?></li>
+                        <?php endforeach ?>
                     </ul>
                     <div class="bestSeller__tabBody">
-                        <div class="bestSeller__grid items-list-commodities active" data-tabbody="All">
-                            <div class="commodity hot items-list__item">
-                                <div class="commodity__img">
-                                    <img src="img/imageProduct.png" alt="sneakers">
-                                    <div class="commodity__add">
-                                        <div class="commodity__icon"><svg><use xlink:href="img/icons/icons.svg#favorite"></use></svg></div>
-                                        <div class="commodity__icon"><svg><use xlink:href="img/icons/icons.svg#trolley"></use></svg></div>
+                        <?php foreach ($data['bestSellerTabs']['bodies'] as $key => $body): ?>
+                        <div class="bestSeller__grid items-list-commodities <?= $key === 'all' ? 'active' : '' ?>" data-tabbody="bestSellerTab_<?=$key?>">
+                            <div class="items-list-commodities">
+                                <?php foreach ($body as $product): ?>
+                                    <div class="commodity items-list__item">
+                                        <div class="commodity__img">
+                                            <img src="<?=PATH . UPLOAD_DIR . $product['img'] ?>" alt="<?=$product['name']?>">
+                                            <div class="commodity__add">
+                                                <div class="commodity__icon"><svg><use xlink:href="<?=$this->getImg('mainImg/icons/icons.svg#favorite')?>"></use></svg></div>
+                                                <div class="commodity__icon"><svg><use xlink:href="<?=$this->getImg('mainImg/icons/icons.svg#trolley')?>"></use></svg></div>
+                                            </div>
+                                        </div>
+                                        <div class="commodity__info">
+                                            <a href="<?= PATH . 'product/' . $product['alias']?>" class=" commodity__title"><?=$product['name']?></a>
+                                            <div class="commodity__assessment">
+                                                <?php for($index = 1; $index <= 5; $index++): ?>
+                                                    <svg class="<?= $product['rating'] >= $index ? 'active' : '' ?>"><use xlink:href="<?=$this->getImg('mainImg/icons/icons.svg#star')?>"></use></svg>
+                                                <?php endfor;?>
+                                            </div>
+                                            <div class="commodity__price">
+                                                <?php if($product['discount'] > 0): ?>
+                                                    <div class="price">$<?=$product['price'] - $product['discount']?></div>
+                                                    <div class="discount"><span><?=$product['price']?>$</span> <?=$product['percentage_discount']?>% Off</div>
+                                                <?php else: ?>
+                                                    <div class="price"><?=$product['price']?></div>
+                                                <?php endif; ?>
+
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="commodity__info">
-                                    <a href="good.html" class=" commodity__title">Nike Air Max 270 React</a>
-                                    <div class="commodity__assessment">
-                                        <svg class="active"><use xlink:href="img/icons/icons.svg#star"></use></svg>
-                                        <svg class="active"><use xlink:href="img/icons/icons.svg#star"></use></svg>
-                                        <svg class="active"><use xlink:href="img/icons/icons.svg#star"></use></svg>
-                                        <svg class="active"><use xlink:href="img/icons/icons.svg#star"></use></svg>
-                                        <svg><use xlink:href="img/icons/icons.svg#star"></use></svg>
-                                    </div>
-                                    <div class="commodity__price">
-                                        <div class="price">$299,43</div>
-                                        <div class="discount"><span>$534.33</span> 24% Off</div>
-                                    </div>
-                                </div>
+                                <?php endforeach; ?>
                             </div>
-                            <div class="commodity items-list__item">
-                                <div class="commodity__img">
-                                    <img src="img/imageProduct.png" alt="sneakers">
-                                    <div class="commodity__add">
-                                        <div class="commodity__icon"><svg><use xlink:href="img/icons/icons.svg#favorite"></use></svg></div>
-                                        <div class="commodity__icon"><svg><use xlink:href="img/icons/icons.svg#trolley"></use></svg></div>
-                                    </div>
-                                </div>
-                                <div class="commodity__info">
-                                    <a href="good.html" class=" commodity__title">Nike Air Max 270 React</a>
-                                    <div class="commodity__assessment">
-                                        <svg class="active"><use xlink:href="img/icons/icons.svg#star"></use></svg>
-                                        <svg class="active"><use xlink:href="img/icons/icons.svg#star"></use></svg>
-                                        <svg class="active"><use xlink:href="img/icons/icons.svg#star"></use></svg>
-                                        <svg class="active"><use xlink:href="img/icons/icons.svg#star"></use></svg>
-                                        <svg><use xlink:href="img/icons/icons.svg#star"></use></svg>
-                                    </div>
-                                    <div class="commodity__price">
-                                        <div class="price">$299,43</div>
-                                        <div class="discount"><span>$534.33</span> 24% Off</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="commodity items-list__item">
-                                <div class="commodity__img">
-                                    <img src="img/imageProduct.png" alt="sneakers">
-                                    <div class="commodity__add">
-                                        <div class="commodity__icon"><svg><use xlink:href="img/icons/icons.svg#favorite"></use></svg></div>
-                                        <div class="commodity__icon"><svg><use xlink:href="img/icons/icons.svg#trolley"></use></svg></div>
-                                    </div>
-                                </div>
-                                <div class="commodity__info">
-                                    <a href="good.html" class=" commodity__title">Nike Air Max 270 React</a>
-                                    <div class="commodity__assessment">
-                                        <svg class="active"><use xlink:href="img/icons/icons.svg#star"></use></svg>
-                                        <svg class="active"><use xlink:href="img/icons/icons.svg#star"></use></svg>
-                                        <svg class="active"><use xlink:href="img/icons/icons.svg#star"></use></svg>
-                                        <svg class="active"><use xlink:href="img/icons/icons.svg#star"></use></svg>
-                                        <svg><use xlink:href="img/icons/icons.svg#star"></use></svg>
-                                    </div>
-                                    <div class="commodity__price">
-                                        <div class="price">$299,43</div>
-                                        <div class="discount"><span>$534.33</span> 24% Off</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="commodity items-list__item">
-                                <div class="commodity__img">
-                                    <img src="img/imageProduct.png" alt="sneakers">
-                                    <div class="commodity__add">
-                                        <div class="commodity__icon"><svg><use xlink:href="img/icons/icons.svg#favorite"></use></svg></div>
-                                        <div class="commodity__icon"><svg><use xlink:href="img/icons/icons.svg#trolley"></use></svg></div>
-                                    </div>
-                                </div>
-                                <div class="commodity__info">
-                                    <a href="good.html" class=" commodity__title">Nike Air Max 270 React</a>
-                                    <div class="commodity__assessment">
-                                        <svg class="active"><use xlink:href="img/icons/icons.svg#star"></use></svg>
-                                        <svg class="active"><use xlink:href="img/icons/icons.svg#star"></use></svg>
-                                        <svg class="active"><use xlink:href="img/icons/icons.svg#star"></use></svg>
-                                        <svg class="active"><use xlink:href="img/icons/icons.svg#star"></use></svg>
-                                        <svg><use xlink:href="img/icons/icons.svg#star"></use></svg>
-                                    </div>
-                                    <div class="commodity__price">
-                                        <div class="price">$299,43</div>
-                                        <div class="discount"><span>$534.33</span> 24% Off</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="commodity items-list__item">
-                                <div class="commodity__img">
-                                    <img src="img/imageProduct.png" alt="sneakers">
-                                    <div class="commodity__add">
-                                        <div class="commodity__icon"><svg><use xlink:href="img/icons/icons.svg#favorite"></use></svg></div>
-                                        <div class="commodity__icon"><svg><use xlink:href="img/icons/icons.svg#trolley"></use></svg></div>
-                                    </div>
-                                </div>
-                                <div class="commodity__info">
-                                    <a href="good.html" class=" commodity__title">Nike Air Max 270 React</a>
-                                    <div class="commodity__assessment">
-                                        <svg class="active"><use xlink:href="img/icons/icons.svg#star"></use></svg>
-                                        <svg class="active"><use xlink:href="img/icons/icons.svg#star"></use></svg>
-                                        <svg class="active"><use xlink:href="img/icons/icons.svg#star"></use></svg>
-                                        <svg class="active"><use xlink:href="img/icons/icons.svg#star"></use></svg>
-                                        <svg><use xlink:href="img/icons/icons.svg#star"></use></svg>
-                                    </div>
-                                    <div class="commodity__price">
-                                        <div class="price">$299,43</div>
-                                        <div class="discount"><span>$534.33</span> 24% Off</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="commodity items-list__item">
-                                <div class="commodity__img">
-                                    <img src="img/imageProduct.png" alt="sneakers">
-                                    <div class="commodity__add">
-                                        <div class="commodity__icon"><svg><use xlink:href="img/icons/icons.svg#favorite"></use></svg></div>
-                                        <div class="commodity__icon"><svg><use xlink:href="img/icons/icons.svg#trolley"></use></svg></div>
-                                    </div>
-                                </div>
-                                <div class="commodity__info">
-                                    <a href="good.html" class=" commodity__title">Nike Air Max 270 React</a>
-                                    <div class="commodity__assessment">
-                                        <svg class="active"><use xlink:href="img/icons/icons.svg#star"></use></svg>
-                                        <svg class="active"><use xlink:href="img/icons/icons.svg#star"></use></svg>
-                                        <svg class="active"><use xlink:href="img/icons/icons.svg#star"></use></svg>
-                                        <svg class="active"><use xlink:href="img/icons/icons.svg#star"></use></svg>
-                                        <svg><use xlink:href="img/icons/icons.svg#star"></use></svg>
-                                    </div>
-                                    <div class="commodity__price">
-                                        <div class="price">$299,43</div>
-                                        <div class="discount"><span>$534.33</span> 24% Off</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="commodity items-list__item">
-                                <div class="commodity__img">
-                                    <img src="img/imageProduct.png" alt="sneakers">
-                                    <div class="commodity__add">
-                                        <div class="commodity__icon"><svg><use xlink:href="img/icons/icons.svg#favorite"></use></svg></div>
-                                        <div class="commodity__icon"><svg><use xlink:href="img/icons/icons.svg#trolley"></use></svg></div>
-                                    </div>
-                                </div>
-                                <div class="commodity__info">
-                                    <a href="good.html" class=" commodity__title">Nike Air Max 270 React</a>
-                                    <div class="commodity__assessment">
-                                        <svg class="active"><use xlink:href="img/icons/icons.svg#star"></use></svg>
-                                        <svg class="active"><use xlink:href="img/icons/icons.svg#star"></use></svg>
-                                        <svg class="active"><use xlink:href="img/icons/icons.svg#star"></use></svg>
-                                        <svg class="active"><use xlink:href="img/icons/icons.svg#star"></use></svg>
-                                        <svg><use xlink:href="img/icons/icons.svg#star"></use></svg>
-                                    </div>
-                                    <div class="commodity__price">
-                                        <div class="price">$299,43</div>
-                                        <div class="discount"><span>$534.33</span> 24% Off</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="commodity items-list__item">
-                                <div class="commodity__img">
-                                    <img src="img/imageProduct.png" alt="sneakers">
-                                    <div class="commodity__add">
-                                        <div class="commodity__icon"><svg><use xlink:href="img/icons/icons.svg#favorite"></use></svg></div>
-                                        <div class="commodity__icon"><svg><use xlink:href="img/icons/icons.svg#trolley"></use></svg></div>
-                                    </div>
-                                </div>
-                                <div class="commodity__info">
-                                    <a href="good.html" class=" commodity__title">Nike Air Max 270 React</a>
-                                    <div class="commodity__assessment">
-                                        <svg class="active"><use xlink:href="img/icons/icons.svg#star"></use></svg>
-                                        <svg class="active"><use xlink:href="img/icons/icons.svg#star"></use></svg>
-                                        <svg class="active"><use xlink:href="img/icons/icons.svg#star"></use></svg>
-                                        <svg class="active"><use xlink:href="img/icons/icons.svg#star"></use></svg>
-                                        <svg><use xlink:href="img/icons/icons.svg#star"></use></svg>
-                                    </div>
-                                    <div class="commodity__price">
-                                        <div class="price">$299,43</div>
-                                        <div class="discount"><span>$534.33</span> 24% Off</div>
-                                    </div>
-                                </div>
-                            </div>
+                            <div class="bestSeller__more refer-button"><a href="<?= PATH . 'catalog/' . ($key !== 'all' ? $key : '')?>">Load more</a></div>
                         </div>
+                        <?php endforeach;?>
                     </div>
 
-                    <div class="bestSeller__more refer-button"><a href="search.html">Load more</a></div>
                 </div>
             </div>
         </section>
@@ -265,7 +111,7 @@
                     <div class="main-banner__info">
                         <div class="main-banner__title"><?=$data['rubrics']['main_banner'][0]['name']?></div>
                         <div class="main-banner__text"><?=$data['rubrics']['main_banner'][0]['text']?></div>
-                        <a href="<?=PATH . UPLOAD_DIR . $data['rubrics']['main_banner'][0]['alias']?>" class="main-banner__button refer-button"><?=$data['rubrics']['main_banner'][0]['alias_text']?></a>
+                        <a href="<?=PATH . $data['rubrics']['main_banner'][0]['alias']?>" class="main-banner__button refer-button"><?=$data['rubrics']['main_banner'][0]['alias_text']?></a>
                     </div>
                     <div class="main-banner__img"><img src="<?= PATH . UPLOAD_DIR . $data['rubrics']['main_banner'][0]['img']?>" alt="photo"></div>
                 </div>

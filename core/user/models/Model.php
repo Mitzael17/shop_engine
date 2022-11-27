@@ -114,4 +114,32 @@ class Model extends BaseModel
 
     }
 
+    public function getBestSellerTabs() {
+
+        $tabs = [];
+
+        $tabs['menu'] = $this->getRubrics(['best_seller_tabs'])['best_seller_tabs'];
+
+        array_unshift($tabs['menu'], ['name' => 'all']);
+
+
+
+        foreach ($tabs['menu'] as $type_product) {
+
+            $where = $type_product['name'] === 'all' ? [] : ['type_id' => $type_product['type_id']];
+
+            $tabs['bodies'][$type_product['name']] = $this->get('products', [
+                'fields' => ['name', 'img', 'price', 'discount', 'alias', 'rating', 'percentage_discount'],
+                'where' => $where,
+                'order' => ['quantity_purchases'],
+                'order_direction' => ['DESC'],
+                'limit' => 8
+            ]);
+
+        }
+
+        return $tabs;
+
+    }
+
 }

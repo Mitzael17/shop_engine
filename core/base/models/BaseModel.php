@@ -82,7 +82,17 @@ abstract class BaseModel
 
         foreach ($result as $key => $record) {
 
-            $foreignData = array_filter($record, function ($foreign_key) {
+            foreach ($record as $field => $value) {
+
+                if(preg_match('/(price)|(discount)/', $field)) $result[$key][$field] += 0;
+
+            }
+
+        }
+
+        foreach ($result as $key => $record) {
+
+                $foreignData = array_filter($record, function ($foreign_key) {
 
                 if(preg_match('/TABLE\w+TABLE_\w+/', $foreign_key)) return true;
 

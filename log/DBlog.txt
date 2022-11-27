@@ -834,3 +834,105 @@ file W:\domains\EcommShop\core\base\models\BaseModel.phpIn Line 43
 file W:\domains\EcommShop\core\base\models\BaseModel.phpIn Line 43
 Ошибка в SQL запросе: SELECT COUNT(*) as quantity, SUM(stars) as stars FROM reviews WHERE products_id=-1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
 file W:\domains\EcommShop\core\base\models\BaseModel.phpIn Line 43
+Ошибка в SQL запросе: SELECT template_best_seller_tabs.id, template_best_seller_tabs.name FROM template_best_seller_tabs   ORDER BY template_best_seller_tabs.menu_position ASC -1054 Unknown column 'template_best_seller_tabs.name' in 'field list'
+file W:\domains\EcommShop\core\base\models\BaseModel.phpIn Line 43
+Ошибка в SQL запросе: SELECT template_best_seller_tabs.id, template_best_seller_tabs.name FROM template_best_seller_tabs   ORDER BY template_best_seller_tabs.menu_position ASC -1054 Unknown column 'template_best_seller_tabs.menu_position' in 'order clause'
+file W:\domains\EcommShop\core\base\models\BaseModel.phpIn Line 43
+Ошибка в SQL запросе: SELECT template_best_seller_tabs.id, template_best_seller_tabs.name FROM template_best_seller_tabs   ORDER BY template_best_seller_tabs.menu_position ASC -1054 Unknown column 'template_best_seller_tabs.menu_position' in 'order clause'
+file W:\domains\EcommShop\core\base\models\BaseModel.phpIn Line 43
+Ошибка в SQL запросе: SELECT COUNT(*) as quantity, SUM(stars) as stars FROM reviews WHERE products_id=-1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+file W:\domains\EcommShop\core\base\models\BaseModel.phpIn Line 43
+Ошибка в SQL запросе: SELECT COUNT(*) as quantity, SUM(stars) as stars FROM reviews WHERE products_id=-1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+file W:\domains\EcommShop\core\base\models\BaseModel.phpIn Line 43
+Ошибка в SQL запросе: SELECT COUNT(*) as quantity, SUM(stars) as stars FROM reviews WHERE products_id=-1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+file W:\domains\EcommShop\core\base\models\BaseModel.phpIn Line 43
+Ошибка в SQL запросе: SELECT COUNT(*) as quantity, SUM(stars) as stars FROM reviews WHERE products_id=-1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+file W:\domains\EcommShop\core\base\models\BaseModel.phpIn Line 43
+Ошибка в SQL запросе: SELECT COUNT(*) as quantity, SUM(stars) as stars FROM reviews WHERE products_id=-1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+file W:\domains\EcommShop\core\base\models\BaseModel.phpIn Line 43
+Ошибка в SQL запросе: SELECT COUNT(*) as quantity, SUM(stars) as stars FROM reviews WHERE products_id=-1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+file W:\domains\EcommShop\core\base\models\BaseModel.phpIn Line 43
+Ошибка в SQL запросе: SELECT COUNT(*) as quantity, SUM(stars) as stars FROM reviews WHERE products_id=-1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+file W:\domains\EcommShop\core\base\models\BaseModel.phpIn Line 43
+Ошибка в SQL запросе: SELECT COUNT(*) as quantity, SUM(stars) as stars FROM reviews WHERE products_id=-1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+file W:\domains\EcommShop\core\base\models\BaseModel.phpIn Line 43
+Ошибка в SQL запросе: SELECT COUNT(*) as quantity, SUM(stars) as stars FROM reviews WHERE products_id=-1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+file W:\domains\EcommShop\core\base\models\BaseModel.phpIn Line 43
+Ошибка в SQL запросе: SELECT COUNT(*) as quantity, SUM(stars) as stars FROM reviews WHERE products_id=-1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+file W:\domains\EcommShop\core\base\models\BaseModel.phpIn Line 43
+Ошибка в SQL запросе: SELECT COUNT(*) as quantity, SUM(stars) as stars FROM reviews WHERE products_id=-1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+file W:\domains\EcommShop\core\base\models\BaseModel.phpIn Line 43
+Ошибка в SQL запросе: SELECT COUNT(*) as quantity, SUM(stars) as stars FROM reviews WHERE products_id=-1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+file W:\domains\EcommShop\core\base\models\BaseModel.phpIn Line 43
+Ошибка в SQL запросе: SELECT COUNT(*) as quantity, SUM(stars) as stars FROM reviews WHERE products_id=-1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+file W:\domains\EcommShop\core\base\models\BaseModel.phpIn Line 43
+Ошибка в SQL запросе: SELECT COUNT(*) as quantity, SUM(stars) as stars FROM reviews WHERE products_id=-1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+file W:\domains\EcommShop\core\base\models\BaseModel.phpIn Line 43
+Ошибка в SQL запросе: SELECT COUNT(*) as quantity, SUM(stars) as stars FROM reviews WHERE products_id=-1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+file W:\domains\EcommShop\core\base\models\BaseModel.phpIn Line 43
+Ошибка в SQL запросе: SELECT COUNT(*) as quantity, SUM(stars) as stars FROM reviews WHERE products_id=-1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+file W:\domains\EcommShop\core\base\models\BaseModel.phpIn Line 43
+Ошибка в SQL запросе: SELECT COUNT(*) as quantity, SUM(stars) as stars FROM reviews WHERE products_id=-1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+file W:\domains\EcommShop\core\base\models\BaseModel.phpIn Line 43
+Ошибка в SQL запросе: SELECT COUNT(*) as quantity, SUM(stars) as stars FROM reviews WHERE products_id=-1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+file W:\domains\EcommShop\core\base\models\BaseModel.phpIn Line 43
+Ошибка в SQL запросе: SELECT COUNT(*) as quantity, SUM(stars) as stars FROM reviews WHERE products_id=-1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+file W:\domains\EcommShop\core\base\models\BaseModel.phpIn Line 43
+Ошибка в SQL запросе: SELECT COUNT(*) as quantity, SUM(stars) as stars FROM reviews WHERE products_id=-1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+file W:\domains\EcommShop\core\base\models\BaseModel.phpIn Line 43
+Ошибка в SQL запросе: SELECT COUNT(*) as quantity, SUM(stars) as stars FROM reviews WHERE products_id=-1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+file W:\domains\EcommShop\core\base\models\BaseModel.phpIn Line 43
+Ошибка в SQL запросе: SELECT COUNT(*) as quantity, SUM(stars) as stars FROM reviews WHERE products_id=-1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+file W:\domains\EcommShop\core\base\models\BaseModel.phpIn Line 43
+Ошибка в SQL запросе: SELECT COUNT(*) as quantity, SUM(stars) as stars FROM reviews WHERE products_id=-1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+file W:\domains\EcommShop\core\base\models\BaseModel.phpIn Line 43
+Ошибка в SQL запросе: SELECT COUNT(*) as quantity, SUM(stars) as stars FROM reviews WHERE products_id=-1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+file W:\domains\EcommShop\core\base\models\BaseModel.phpIn Line 43
+Ошибка в SQL запросе: SELECT COUNT(*) as quantity, SUM(stars) as stars FROM reviews WHERE products_id=-1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+file W:\domains\EcommShop\core\base\models\BaseModel.phpIn Line 43
+Ошибка в SQL запросе: SELECT COUNT(*) as quantity, SUM(stars) as stars FROM reviews WHERE products_id=-1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+file W:\domains\EcommShop\core\base\models\BaseModel.phpIn Line 43
+Ошибка в SQL запросе: SELECT COUNT(*) as quantity, SUM(stars) as stars FROM reviews WHERE products_id=-1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+file W:\domains\EcommShop\core\base\models\BaseModel.phpIn Line 43
+Ошибка в SQL запросе: SELECT COUNT(*) as quantity, SUM(stars) as stars FROM reviews WHERE products_id=-1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+file W:\domains\EcommShop\core\base\models\BaseModel.phpIn Line 43
+Ошибка в SQL запросе: SELECT COUNT(*) as quantity, SUM(stars) as stars FROM reviews WHERE products_id=-1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+file W:\domains\EcommShop\core\base\models\BaseModel.phpIn Line 43
+Ошибка в SQL запросе: SELECT COUNT(*) as quantity, SUM(stars) as stars FROM reviews WHERE products_id=-1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+file W:\domains\EcommShop\core\base\models\BaseModel.phpIn Line 43
+Ошибка в SQL запросе: SELECT COUNT(*) as quantity, SUM(stars) as stars FROM reviews WHERE products_id=-1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+file W:\domains\EcommShop\core\base\models\BaseModel.phpIn Line 43
+Ошибка в SQL запросе: SELECT COUNT(*) as quantity, SUM(stars) as stars FROM reviews WHERE products_id=-1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+file W:\domains\EcommShop\core\base\models\BaseModel.phpIn Line 43
+Ошибка в SQL запросе: SELECT COUNT(*) as quantity, SUM(stars) as stars FROM reviews WHERE products_id=-1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+file W:\domains\EcommShop\core\base\models\BaseModel.phpIn Line 43
+Ошибка в SQL запросе: SELECT COUNT(*) as quantity, SUM(stars) as stars FROM reviews WHERE products_id=-1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+file W:\domains\EcommShop\core\base\models\BaseModel.phpIn Line 43
+Ошибка в SQL запросе: SELECT COUNT(*) as quantity, SUM(stars) as stars FROM reviews WHERE products_id=-1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+file W:\domains\EcommShop\core\base\models\BaseModel.phpIn Line 43
+Ошибка в SQL запросе: SELECT COUNT(*) as quantity, SUM(stars) as stars FROM reviews WHERE products_id=-1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+file W:\domains\EcommShop\core\base\models\BaseModel.phpIn Line 43
+Ошибка в SQL запросе: SELECT COUNT(*) as quantity, SUM(stars) as stars FROM reviews WHERE products_id=-1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+file W:\domains\EcommShop\core\base\models\BaseModel.phpIn Line 43
+Ошибка в SQL запросе: SELECT COUNT(*) as quantity, SUM(stars) as stars FROM reviews WHERE products_id=-1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+file W:\domains\EcommShop\core\base\models\BaseModel.phpIn Line 43
+Ошибка в SQL запросе: SELECT COUNT(*) as quantity, SUM(stars) as stars FROM reviews WHERE products_id=-1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+file W:\domains\EcommShop\core\base\models\BaseModel.phpIn Line 43
+Ошибка в SQL запросе: SELECT COUNT(*) as quantity, SUM(stars) as stars FROM reviews WHERE products_id=-1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+file W:\domains\EcommShop\core\base\models\BaseModel.phpIn Line 43
+Ошибка в SQL запросе: SELECT COUNT(*) as quantity, SUM(stars) as stars FROM reviews WHERE products_id=-1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+file W:\domains\EcommShop\core\base\models\BaseModel.phpIn Line 43
+Ошибка в SQL запросе: SELECT COUNT(*) as quantity, SUM(stars) as stars FROM reviews WHERE products_id=-1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+file W:\domains\EcommShop\core\base\models\BaseModel.phpIn Line 43
+Ошибка в SQL запросе: SELECT COUNT(*) as quantity, SUM(stars) as stars FROM reviews WHERE products_id=-1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+file W:\domains\EcommShop\core\base\models\BaseModel.phpIn Line 43
+Ошибка в SQL запросе: SELECT COUNT(*) as quantity, SUM(stars) as stars FROM reviews WHERE products_id=-1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+file W:\domains\EcommShop\core\base\models\BaseModel.phpIn Line 43
+Ошибка в SQL запросе: SELECT COUNT(*) as quantity, SUM(stars) as stars FROM reviews WHERE products_id=-1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+file W:\domains\EcommShop\core\base\models\BaseModel.phpIn Line 43
+Ошибка в SQL запросе: SELECT COUNT(*) as quantity, SUM(stars) as stars FROM reviews WHERE products_id=-1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+file W:\domains\EcommShop\core\base\models\BaseModel.phpIn Line 43
+Ошибка в SQL запросе: SELECT COUNT(*) as quantity, SUM(stars) as stars FROM reviews WHERE products_id=-1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+file W:\domains\EcommShop\core\base\models\BaseModel.phpIn Line 43
+Ошибка в SQL запросе: SELECT COUNT(*) as quantity, SUM(stars) as stars FROM reviews WHERE products_id=-1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+file W:\domains\EcommShop\core\base\models\BaseModel.phpIn Line 43

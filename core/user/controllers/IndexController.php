@@ -19,6 +19,8 @@ class IndexController extends BaseUser
 
         $data['rubrics'] = $this->model->getRubrics(['main_slider', 'banner_commodities', 'features', 'news', 'feature_products', 'feature_products', 'main_banner']);
 
+        $data['bestSellerTabs'] = $this->model->getBestSellerTabs();
+
         return $data;
 
     }
