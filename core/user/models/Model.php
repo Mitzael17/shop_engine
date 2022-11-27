@@ -122,23 +122,39 @@ class Model extends BaseModel
 
         array_unshift($tabs['menu'], ['name' => 'all']);
 
-
-
         foreach ($tabs['menu'] as $type_product) {
 
-            $where = $type_product['name'] === 'all' ? [] : ['type_id' => $type_product['type_id']];
-
-            $tabs['bodies'][$type_product['name']] = $this->get('products', [
-                'fields' => ['name', 'img', 'price', 'discount', 'alias', 'rating', 'percentage_discount'],
-                'where' => $where,
-                'order' => ['quantity_purchases'],
-                'order_direction' => ['DESC'],
-                'limit' => 8
-            ]);
+            $tabs['bodies'][$type_product['name']] = $this->getBestSellers($type_product['type_id'] ?: null, 8);
 
         }
 
         return $tabs;
+
+    }
+
+    public function getProductFilters($id) {
+
+        $query = "SELECT products_to_filters.*, f1.*, f2.name as filter_name FROM products_to_filters LEFT JOIN filters as f1 ON f1.id=products_to_filters.filters_id LEFT JOIN filters as f2 ON f1.filters_id=f2.id WHERE products_to_filters.products_id=$id";
+
+        $filters = $this->query($query);
+
+        return $filters;
+
+    }
+
+    public function getBestSellers($type_id = null, $limit = 4) {
+
+        $where = $type_id === null ? [] : ['type_id' => $type_id];
+
+        $products = $this->get('products', [
+            'fields' => ['name', 'img', 'price', 'discount', 'alias', 'rating', 'percentage_discount'],
+            'where' => $where,
+            'order' => ['quantity_purchases'],
+            'order_direction' => ['DESC'],
+            'limit' => $limit
+        ]);
+
+        return $products;
 
     }
 

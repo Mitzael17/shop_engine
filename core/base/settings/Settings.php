@@ -28,7 +28,10 @@ class Settings
         ]
     ];
 
-
+    private $filterTypeView = [
+        'size' => 'select',
+        'color' => 'radioColor',
+    ];
 
     private $templateArr = [
         'input' => ['name', 'discount', 'price', 'template' => '/_position$/i', 'priority', 'alias', 'alias_text', 'quantity'],

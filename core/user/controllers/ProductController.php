@@ -2,6 +2,8 @@
 
 namespace core\user\controllers;
 
+use core\base\settings\Settings;
+
 class ProductController extends BaseUser
 {
 
@@ -36,19 +38,20 @@ class ProductController extends BaseUser
 
         $this->findFilters($data, $id);
 
+        $data['bestSellerSlider'] = $this->model->getBestSellers($data['product']['type_id'], 4);
+
         return $data;
 
     }
 
     protected function findFilters(&$data, $id) {
 
-        $query = "SELECT products_to_filters.*, f1.*, f2.name as filter_name FROM products_to_filters LEFT JOIN filters as f1 ON f1.id=products_to_filters.filters_id LEFT JOIN filters as f2 ON f1.filters_id=f2.id WHERE products_to_filters.products_id=$id";
-
-        $filters = $this->model->query($query);
+        $filters = $this->model->getProductFilters($id);
 
         if(!empty($filters)) {
 
             $data['product']['filters'] = [];
+            $FiltersTypeView = Settings::instance()->get('filterTypeView');
 
             foreach ($filters as $filter) {
 
@@ -59,6 +62,21 @@ class ProductController extends BaseUser
                 }
 
                 $data['product']['filters'][$filter['filter_name']][] = $filter['name'];
+
+            }
+
+            foreach ($data['product']['filters'] as $group_name => $group_filter) {
+
+                unset($data['product']['filters'][$group_name]);
+
+                $group_name = strtolower($group_name);
+
+                $data['product']['filters'][$group_name] = [
+
+                    'type' => $FiltersTypeView[$group_name],
+                    'items' => $group_filter
+
+                ];
 
             }
 

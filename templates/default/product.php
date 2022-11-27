@@ -62,39 +62,13 @@
                             <div class="good__form">
                                 <form action="#">
                                     <div class="good__parametrs">
-                                        <?php if(isset($data['product']['filters']['Color'])): ?>
-                                        <div class="good__colorsContainer">
-
-                                            <span class="good__hint">Select color:</span>
-
-                                            <div class="good__colors">
-
-                                                <?php foreach ($data['product']['filters']['Color'] as $color): ?>
-                                                    <input type="radio" name="color" class="goods-input-color" id="good__colors--<?=$color?>">
-                                                    <label class="label-parametr-color" for="good__colors--<?=$color?>">
-                                                        <span class="goods-color" style="background-color: <?=$color === 'white' ? '#e3e3e3' : $color?>;"></span>
-                                                    </label>
+                                        <div class="stick">
+                                            <?php if(isset($data['product']['filters'])): ?>
+                                                <?php foreach ($data['product']['filters'] as $key => $value): ?>
+                                                    <?php include 'includes/components/product/' . $value['type'] . '.php'  ?>
                                                 <?php endforeach; ?>
-
-        
-                                            </div>
-    
+                                            <?php endif; ?>
                                         </div>
-                                        <?php endif; ?>
-                                        <?php if(isset($data['product']['filters']['Size'])): ?>
-                                        <div class="good__size stick">
-                                            <span class="good__hint">Size</span>
-                                            <div class="good__listArea show-list">
-                                                <span class="good__sizeSelected show-list__selected"><?=$data['product']['filters']['Size'][0]?></span>
-                                                <ul class="good__list show-list__body">
-                                                    <?php foreach ($data['product']['filters']['Size'] as $size): ?>
-                                                    <li class="good__option show-list__option"><?=$size?></li>
-                                                    <?php endforeach; ?>
-                                                </ul>
-                                                <input type="hidden" id="good__size" value="<?=$data['product']['filters']['Size'][0]?>" name="good__size">
-                                            </div>
-                                        </div>
-                                        <?php endif; ?>
                                         <div class="good__block stick">
                                             <div class="good__quantityGoods counter">
                                                 <button class="counter-minus" type="button" onclick="this.nextElementSibling.stepDown();">-</button>
@@ -209,100 +183,40 @@
                     </div>
                 </div>
                 <aside class="good-aside">
-                    <div class="good-aside__title">best seller</div>
-                    <div class="good-aside__slider">
-                        <div class="swiper-wrapper">
-                            <div class="commodity swiper-slide">
-                                <div class="commodity__img">
-                                    <img class="swiper-lazy" data-srcset="img/imageProduct.png" src="../../../../../работы/другое/E-Comm/dist/img/loading.gif" alt="sneakers">
-                                    <div class="commodity__add">
-                                        <div class="commodity__icon"><svg><use xlink:href="img/icons/icons.svg#favorite"></use></svg></div>
-                                        <div class="commodity__icon"><svg><use xlink:href="img/icons/icons.svg#trolley"></use></svg></div>
+                    <?php if(isset($data['bestSellerSlider'])): ?>
+                        <div class="good-aside__title">best seller</div>
+                        <div class="good-aside__slider">
+                            <div class="swiper-wrapper">
+                                <?php foreach ($data['bestSellerSlider'] as $product): ?>
+                                <div class="commodity swiper-slide">
+                                    <div class="commodity__img">
+                                        <img class="swiper-lazy" data-srcset="<?=$this->getImg($product['img'])?>" src="<?=$this->getImg('mainImg/loading.gif')?>">
+                                        <div class="commodity__add">
+                                            <div class="commodity__icon"><svg><use xlink:href="<?=$this->getImg('mainImg/icons/icons.svg#favorite')?>"></use></svg></div>
+                                            <div class="commodity__icon"><svg><use xlink:href="<?=$this->getImg('mainImg/icons/icons.svg#trolley')?>"></use></svg></div>
+                                        </div>
+                                    </div>
+                                    <div class="commodity__info">
+                                        <a href="<?= PATH. 'product/' . $product['alias'] ?>" class=" commodity__title"><?=$product['name']?></a>
+                                        <div class="commodity__assessment commodity__assessment--2">
+                                            <?php for($index = 1; $index <= 5; $index++): ?>
+                                                <svg class="<?= $product['rating'] >= $index ? 'active' : '' ?>"><use xlink:href="<?=$this->getImg('mainImg/icons/icons.svg#star')?>"></use></svg>
+                                            <?php endfor;?>
+                                        </div>
+                                        <div class="commodity__price">
+                                            <?php if($product['discount'] > 0): ?>
+                                                <div class="discount">$<?=$product['price'] - $product['discount']?> <span>$<?=$product['price']?></span></div>
+                                            <?php else: ?>
+                                                <div class="price">$<?=$product['price']?></div>
+                                            <?php endif; ?>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="commodity__info">
-                                    <a href="good.html" class=" commodity__title">Nike Air Max 270 React</a>
-                                    <div class="commodity__assessment commodity__assessment--2">
-                                        <svg class="active"><use xlink:href="img/icons/icons.svg#star"></use></svg>
-                                        <svg class="active"><use xlink:href="img/icons/icons.svg#star"></use></svg>
-                                        <svg class="active"><use xlink:href="img/icons/icons.svg#star"></use></svg>
-                                        <svg class="active"><use xlink:href="img/icons/icons.svg#star"></use></svg>
-                                        <svg><use xlink:href="img/icons/icons.svg#star"></use></svg>
-                                    </div>
-                                    <div class="commodity__price">
-                                        <div class="discount">$499 <span>$534.33</span></div>
-                                    </div>
-                                </div>
+                                <?php endforeach; ?>
                             </div>
-                            <div class="commodity swiper-slide">
-                                <div class="commodity__img">
-                                    <img class="swiper-lazy" data-srcset="img/discount--2.png" src="../../../../../работы/другое/E-Comm/dist/img/loading.gif" alt="sneakers">
-                                    <div class="commodity__add">
-                                        <div class="commodity__icon"><svg><use xlink:href="img/icons/icons.svg#favorite"></use></svg></div>
-                                        <div class="commodity__icon"><svg><use xlink:href="img/icons/icons.svg#trolley"></use></svg></div>
-                                    </div>
-                                </div>
-                                <div class="commodity__info">
-                                    <a href="good.html" class=" commodity__title">Nike Air Max 270 React</a>
-                                    <div class="commodity__assessment commodity__assessment--2">
-                                        <svg class="active"><use xlink:href="img/icons/icons.svg#star"></use></svg>
-                                        <svg class="active"><use xlink:href="img/icons/icons.svg#star"></use></svg>
-                                        <svg class="active"><use xlink:href="img/icons/icons.svg#star"></use></svg>
-                                        <svg class="active"><use xlink:href="img/icons/icons.svg#star"></use></svg>
-                                        <svg><use xlink:href="img/icons/icons.svg#star"></use></svg>
-                                    </div>
-                                    <div class="commodity__price">
-                                        <div class="discount">$499 <span>$534.33</span></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="commodity swiper-slide">
-                                <div class="commodity__img">
-                                    <img class="swiper-lazy" data-srcset="img/imageProduct.png" src="../../../../../работы/другое/E-Comm/dist/img/loading.gif" alt="sneakers">
-                                    <div class="commodity__add">
-                                        <div class="commodity__icon"><svg><use xlink:href="img/icons/icons.svg#favorite"></use></svg></div>
-                                        <div class="commodity__icon"><svg><use xlink:href="img/icons/icons.svg#trolley"></use></svg></div>
-                                    </div>
-                                </div>
-                                <div class="commodity__info">
-                                    <a href="good.html" class=" commodity__title">Nike Air Max 270 React</a>
-                                    <div class="commodity__assessment commodity__assessment--2">
-                                        <svg class="active"><use xlink:href="img/icons/icons.svg#star"></use></svg>
-                                        <svg class="active"><use xlink:href="img/icons/icons.svg#star"></use></svg>
-                                        <svg class="active"><use xlink:href="img/icons/icons.svg#star"></use></svg>
-                                        <svg class="active"><use xlink:href="img/icons/icons.svg#star"></use></svg>
-                                        <svg><use xlink:href="img/icons/icons.svg#star"></use></svg>
-                                    </div>
-                                    <div class="commodity__price">
-                                        <div class="discount">$499 <span>$534.33</span></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="commodity swiper-slide">
-                                <div class="commodity__img">
-                                    <img class="swiper-lazy" data-srcset="https://sobakainfo.ru/wp-content/uploads/2016/11/6-14.jpg" src="../../../../../работы/другое/E-Comm/dist/img/loading.gif" alt="sneakers">
-                                    <div class="commodity__add">
-                                        <div class="commodity__icon"><svg><use xlink:href="img/icons/icons.svg#favorite"></use></svg></div>
-                                        <div class="commodity__icon"><svg><use xlink:href="img/icons/icons.svg#trolley"></use></svg></div>
-                                    </div>
-                                </div>
-                                <div class="commodity__info">
-                                    <a href="good.html" class=" commodity__title">Nike Air Max 270 React</a>
-                                    <div class="commodity__assessment commodity__assessment--2">
-                                        <svg class="active"><use xlink:href="img/icons/icons.svg#star"></use></svg>
-                                        <svg class="active"><use xlink:href="img/icons/icons.svg#star"></use></svg>
-                                        <svg class="active"><use xlink:href="img/icons/icons.svg#star"></use></svg>
-                                        <svg class="active"><use xlink:href="img/icons/icons.svg#star"></use></svg>
-                                        <svg><use xlink:href="img/icons/icons.svg#star"></use></svg>
-                                    </div>
-                                    <div class="commodity__price">
-                                        <div class="discount">$499 <span>$534.33</span></div>
-                                    </div>
-                                </div>
-                            </div>
+                            <div class="good-aside__pagination slider-pagination"></div>
                         </div>
-                        <div class="good-aside__pagination slider-pagination"></div>
-                    </div>
+                    <?php endif; ?>
                 </aside>
             </div>
             <div class="relatedProducts">
